@@ -6,12 +6,12 @@ About Awstats:
 
 ## Run 
 
-If your apache log save in path: /mnt/log/access.log, and you can mount this file to the awstats server for analysis use. 
+If your apache logs save in path: /mnt/log/*.log , and you can mount this file to the awstats server for analysis use. 
 
 ```
 docker run -d --name awstats --hostname ServerName \
-  -v /mnt/log/access.log:/var/log/apache2/access.log \
-  -p 8080:80 ewant/awstats
+  -v /mnt/log:/var/log/apache2 \
+  -p 8080:80 falconmfm/awstats
 ```
 
 In this command, you will also run your server into host port 8080.
@@ -20,9 +20,9 @@ In this command, you will also run your server into host port 8080.
 
 ```
 docker run -d --name awstats --hostname ServerName \
-  -v /mnt/log/access.log:/var/log/apache2/access.log \
-  -v /path/to/your.conf:/usr/lib/cgi-bin/awstats/awstats.linoxide.conf && \
-  -p 8080:80 ewant/awstats
+  -v /mnt/log:/var/log/apache2 \
+  -v /path/to/your.conf:/usr/lib/cgi-bin/awstats/awstats.awstats.conf && \
+  -p 8080:80 falconmfm/awstats
 ```
 
 ## Browse
