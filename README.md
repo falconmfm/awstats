@@ -1,4 +1,4 @@
-# Awstats
+# Awstats 7.5
 
 This is a simple way to analysis the apache log in a full graphic web page.
 
@@ -28,6 +28,6 @@ docker run -d --name awstats --hostname ServerName \
 ## Browse
 
 ```
-http://your-awstats-ip-addr:8080/cgi-bin/awstats/awstats.pl?config=linoxide
+http://your-awstats-ip-addr:8080/cgi-bin/awstats/awstats.pl?config=awstats
 ```
 
