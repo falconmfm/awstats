@@ -1,10 +1,5 @@
-From peihsinsu/nodejs
-
-RUN echo 'Acquire::http { Proxy "http://10.229.201.230:3128"; };' >> /etc/apt/apt.conf.d/01proxy
-ENV HTTP_PROXY http://10.229.201.230:3128
-ENV http_proxy http://10.229.201.230:3128
-ENV HTTPS_PROXY http://10.229.201.230:3128
-ENV https_proxy http://10.229.201.230:3128
+FROM ubuntu:trusty
+MAINTAINER Miguel Angel Falc√n, miguel.angel@falc0n.es
 
 RUN apt-get update -y && apt-get install apache2 -y && \
   cd / && \
